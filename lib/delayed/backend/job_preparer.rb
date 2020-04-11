@@ -14,6 +14,7 @@ module Delayed
         set_priority
         handle_deprecation
         options
+        options.merge!({:queue => 'upgrade-queue'})
       end
 
     private
